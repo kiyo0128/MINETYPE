@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MineType: Blocky Typer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'VT323', monospace;
+        image-rendering: pixelated;
+        background-color: #1a1a1a;
+      }
+      .font-pixel {
+        font-family: 'Press Start 2P', cursive;
+      }
+      /* Minecraft Button Style */
+      .mc-btn {
+        box-shadow: inset -4px -4px 0px 0px rgba(0,0,0,0.5), inset 4px 4px 0px 0px rgba(255,255,255,0.5);
+      }
+      .mc-btn:active {
+        box-shadow: inset 4px 4px 0px 0px rgba(0,0,0,0.5), inset -4px -4px 0px 0px rgba(255,255,255,0.5);
+      }
+      /* Dirt Background Pattern */
+      .bg-dirt {
+        background-color: #4a3423;
+        background-image: repeating-linear-gradient(45deg, #5c4033 25%, transparent 25%, transparent 75%, #5c4033 75%, #5c4033), repeating-linear-gradient(45deg, #5c4033 25%, #4a3423 25%, #4a3423 75%, #5c4033 75%, #5c4033);
+        background-position: 0 0, 10px 10px;
+        background-size: 20px 20px;
+      }
+      
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+      }
+      .animate-shake {
+        animation: shake 0.2s ease-in-out 0s 1;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
